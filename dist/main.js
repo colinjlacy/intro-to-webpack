@@ -65,161 +65,121 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 // our base class
-var Character = exports.Character = function () {
-	function Character(name) {
-		_classCallCheck(this, Character);
-
+class Character {
+	constructor(name) {
 		this.name = name;
 	}
 
-	_createClass(Character, [{
-		key: 'addCharacter',
-		value: function addCharacter() {
-			var el = document.createElement('li');
-			el.innerHTML = this.name;
-			document.getElementById('characters').appendChild(el);
-		}
-	}]);
+	addCharacter() {
+		const el = document.createElement('li');
+		el.innerHTML = this.name;
+		document.getElementById('characters').appendChild(el);
+	}
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Character;
 
-	return Character;
-}();
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-__webpack_require__(5);
-module.exports = __webpack_require__(8);
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _mario = __webpack_require__(3);
-
-var _luigi = __webpack_require__(4);
-
-_mario.Mario.addCharacter();
-_luigi.Luigi.addCharacter();
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Mario = undefined;
-
-var _character = __webpack_require__(0);
-
-var Mario = exports.Mario = new _character.Character('Mario');
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Luigi = undefined;
-
-var _character = __webpack_require__(0);
-
-var Luigi = exports.Luigi = new _character.Character('Luigi');
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _diddyKong = __webpack_require__(6);
-
-var _donkeyKong = __webpack_require__(7);
-
-_diddyKong.DiddyKong.addCharacter();
-_donkeyKong.DonkeyKong.addCharacter();
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DiddyKong = undefined;
-
-var _character = __webpack_require__(0);
-
-var DiddyKong = exports.DiddyKong = new _character.Character('Diddy Kong');
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DonkeyKong = undefined;
-
-var _character = __webpack_require__(0);
-
-var DonkeyKong = exports.DonkeyKong = new _character.Character('Donkey Kong');
-
-/***/ }),
-/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sonic__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mario__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__luigi__ = __webpack_require__(4);
 
-__WEBPACK_IMPORTED_MODULE_0__sonic__["a" /* Sonic */].addCharacter();
 
+
+
+__WEBPACK_IMPORTED_MODULE_0__mario__["a" /* Mario */].addCharacter();
+__WEBPACK_IMPORTED_MODULE_1__luigi__["a" /* Luigi */].addCharacter();
 
 /***/ }),
-/* 9 */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sonic; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__character__);
 
-var Sonic = new __WEBPACK_IMPORTED_MODULE_0__character__["Character"]('Sonic');
+
+
+const Mario = new __WEBPACK_IMPORTED_MODULE_0__character__["a" /* Character */]('Mario');
+/* harmony export (immutable) */ __webpack_exports__["a"] = Mario;
+
+
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(0);
+
+
+
+const Luigi = new __WEBPACK_IMPORTED_MODULE_0__character__["a" /* Character */]('Luigi');
+/* harmony export (immutable) */ __webpack_exports__["a"] = Luigi;
+
+
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__diddy_kong__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__donkey_kong__ = __webpack_require__(7);
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_0__diddy_kong__["a" /* DiddyKong */].addCharacter();
+__WEBPACK_IMPORTED_MODULE_1__donkey_kong__["a" /* DonkeyKong */].addCharacter();
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(0);
+
+
+
+const DiddyKong = new __WEBPACK_IMPORTED_MODULE_0__character__["a" /* Character */]('Diddy Kong');
+/* harmony export (immutable) */ __webpack_exports__["a"] = DiddyKong;
+
+
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(0);
+
+
+
+const DonkeyKong = new __WEBPACK_IMPORTED_MODULE_0__character__["a" /* Character */]('Donkey Kong');
+/* harmony export (immutable) */ __webpack_exports__["a"] = DonkeyKong;
+
+
 
 
 /***/ })
