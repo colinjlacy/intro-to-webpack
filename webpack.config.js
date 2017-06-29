@@ -39,12 +39,20 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				loader: 'babel-loader'
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+				options: {
+					presets: ['es2015']
+				}
 			},
 			{
 				test: /\.ts$/,
+				exclude: /node_modules/,
 				loader: 'ts-loader'
 			}
 		]
+	},
+	devServer: {
+		port: 9000
 	}
 };
