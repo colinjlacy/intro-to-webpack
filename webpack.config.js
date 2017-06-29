@@ -1,11 +1,18 @@
 
-const fs = require('fs');
+const fs = require('fs'),
+	ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// set up a new instance of the extract text plugin,
+// pass in an output path for the data it captures
+const extractSass = new ExtractTextPlugin('dist/main.css');
 
 // fetch each item in the `.src/` directory
 const srcItems = fs.readdirSync('./src');
 
 // set an empty array that will store all entry files
-let entriesArray = [];
+let entriesArray = [
+	'./src/styles.scss'
+];
 
 // loop over each item
 srcItems.forEach(item => {
@@ -44,7 +51,25 @@ module.exports = {
 			{
 				test: /\.ts$/,
 				loader: 'ts-loader'
+			},
+			{
+				test: /\.scss/,
+				loader: extractSass.extract(
+					['css-loader', {
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true
+						}
+					}]
+				)
 			}
 		]
+	},
+	plugins: [
+		extractSass
+	],
+	devServer: {
+		port: 9000
 	}
 };
+
