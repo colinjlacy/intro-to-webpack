@@ -43,8 +43,12 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.js']
 	},
+	// when resolving a loader from a local file path,
+	// we need to alias it so that Webpack knows how to find it
 	resolveLoader: {
 		alias: {
+			// here, we'll alias the path to the origin-loader so that we can
+			// use it just like any other loader
 			'origin-loader': require('path').resolve('./scripts/origin-loader')
 		}
 	},
@@ -53,12 +57,12 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loaders: ['babel-loader', 'origin-loader']
+				loaders: ['babel-loader', 'origin-loader'] // <= there it is!
 			},
 			{
 				test: /\.ts$/,
 				exclude: /node_modules/,
-				loader: ['ts-loader', 'origin-loader']
+				loader: ['ts-loader', 'origin-loader'] // <= there it is!
 			},
 			{
 				test: /\.scss/,
