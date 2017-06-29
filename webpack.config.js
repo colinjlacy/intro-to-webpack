@@ -1,8 +1,8 @@
 module.exports = {
 	entry: [
-		'./src/mario-bros/index.js',
-		'./src/donkey-kong/index.js',
-		'./src/sega/index.ts'
+		'./src/mario-bros/index',
+		'./src/donkey-kong/index',
+		'./src/sega/index'
 	],
 	output: {
 		filename: 'dist/main.js'
