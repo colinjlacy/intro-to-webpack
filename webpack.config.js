@@ -1,6 +1,7 @@
 
 const fs = require('fs'),
-	ExtractTextPlugin = require('extract-text-webpack-plugin');
+	ExtractTextPlugin = require('extract-text-webpack-plugin'),
+	originLoader = require('./scripts/origin-loader');
 
 // set up a new instance of the extract text plugin,
 // pass in an output path for the data it captures
@@ -42,15 +43,22 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.js']
 	},
+	resolveLoader: {
+		alias: {
+			'origin-loader': require('path').resolve('./scripts/origin-loader')
+		}
+	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
-				loader: 'babel-loader'
+				exclude: /node_modules/,
+				loaders: ['babel-loader', 'origin-loader']
 			},
 			{
 				test: /\.ts$/,
-				loader: 'ts-loader'
+				exclude: /node_modules/,
+				loader: ['ts-loader', 'origin-loader']
 			},
 			{
 				test: /\.scss/,
