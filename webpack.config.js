@@ -33,7 +33,7 @@ module.exports = {
 		filename: 'dist/main.js'
 	},
 	resolve: {
-		extensions: ['.ts', '.js']
+		extensions: ['.ts', '.js', '']
 	},
 	module: {
 		rules: [
