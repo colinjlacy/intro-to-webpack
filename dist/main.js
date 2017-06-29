@@ -104,7 +104,8 @@ var Character = exports.Character = function () {
 
 __webpack_require__(2);
 __webpack_require__(5);
-module.exports = __webpack_require__(8);
+__webpack_require__(8);
+module.exports = __webpack_require__(10);
 
 
 /***/ }),
@@ -114,61 +115,15 @@ module.exports = __webpack_require__(8);
 "use strict";
 
 
-var _mario = __webpack_require__(3);
+var _diddyKong = __webpack_require__(3);
 
-var _luigi = __webpack_require__(4);
-
-_mario.Mario.addCharacter();
-_luigi.Luigi.addCharacter();
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Mario = undefined;
-
-var _character = __webpack_require__(0);
-
-var Mario = exports.Mario = new _character.Character('Mario');
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Luigi = undefined;
-
-var _character = __webpack_require__(0);
-
-var Luigi = exports.Luigi = new _character.Character('Luigi');
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _diddyKong = __webpack_require__(6);
-
-var _donkeyKong = __webpack_require__(7);
+var _donkeyKong = __webpack_require__(4);
 
 _diddyKong.DiddyKong.addCharacter();
 _donkeyKong.DonkeyKong.addCharacter();
 
 /***/ }),
-/* 6 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -184,7 +139,7 @@ var _character = __webpack_require__(0);
 var DiddyKong = exports.DiddyKong = new _character.Character('Diddy Kong');
 
 /***/ }),
-/* 7 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -198,6 +153,52 @@ exports.DonkeyKong = undefined;
 var _character = __webpack_require__(0);
 
 var DonkeyKong = exports.DonkeyKong = new _character.Character('Donkey Kong');
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _mario = __webpack_require__(6);
+
+var _luigi = __webpack_require__(7);
+
+_mario.Mario.addCharacter();
+_luigi.Luigi.addCharacter();
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Mario = undefined;
+
+var _character = __webpack_require__(0);
+
+var Mario = exports.Mario = new _character.Character('Mario');
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Luigi = undefined;
+
+var _character = __webpack_require__(0);
+
+var Luigi = exports.Luigi = new _character.Character('Luigi');
 
 /***/ }),
 /* 8 */
@@ -220,6 +221,59 @@ __WEBPACK_IMPORTED_MODULE_0__sonic__["a" /* Sonic */].addCharacter();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__character__);
 
 var Sonic = new __WEBPACK_IMPORTED_MODULE_0__character__["Character"]('Sonic');
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__link__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zelda__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ganondorf__ = __webpack_require__(13);
+
+
+
+__WEBPACK_IMPORTED_MODULE_0__link__["a" /* Link */].addCharacter();
+__WEBPACK_IMPORTED_MODULE_1__zelda__["a" /* Zelda */].addCharacter();
+__WEBPACK_IMPORTED_MODULE_2__ganondorf__["a" /* Ganondorf */].addCharacter();
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Link; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__character__);
+
+var Link = new __WEBPACK_IMPORTED_MODULE_0__character__["Character"]('Link');
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Zelda; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__character__);
+
+var Zelda = new __WEBPACK_IMPORTED_MODULE_0__character__["Character"]('Zelda');
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ganondorf; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__character__);
+
+var Ganondorf = new __WEBPACK_IMPORTED_MODULE_0__character__["Character"]('Ganondorf');
 
 
 /***/ })
