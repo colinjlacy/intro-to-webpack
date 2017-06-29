@@ -33,14 +33,17 @@ module.exports = {
 		filename: 'dist/main.js'
 	},
 	resolve: {
-		extensions: ['.ts', '.js', '']
+		extensions: ['.ts', '.js']
 	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader'
+				loader: 'babel-loader',
+				options: {
+					presets: ['es2015']
+				}
 			},
 			{
 				test: /\.ts$/,
